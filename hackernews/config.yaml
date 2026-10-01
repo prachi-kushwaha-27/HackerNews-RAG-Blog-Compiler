@@ -1,0 +1,43 @@
+hnApiMaxRps: 5
+timeout: 10s
+sleep: 3h
+storyQueueSize: 5
+storiesSubsetSize: 100
+tempDir: "./static/temp/"
+postSummaryDir: "./static/hackernews-posts/summary/"
+postsDir: "./static/hackernews-posts/posts/"
+summarisePrompt: |
+  "Pretend
+  You are a creative writer and engineer and have excellent knowledge of the tech world, specially computer science, mathematics and AI.
+  You are given a post from hackernews and discussions related to it to read and summarise it so
+  well that any new person gets to understand all the good contents out of the post just by reading your summary.
+  In the first line, write good title for the post (do not write anything else before or onthat line),
+  and then in following lines, write the summary.
+  Title should really catch the assence of post and what people think about it in conversation.
+  The comments/conversations in tht blog are very import too so do not miss any interesting conversation or insights in it.
+  You can also copy and paste interesting comments, arguments or quotes in conversation or in web page as full or summarised. 
+  Keep the summary to the point and try to convey all the relevant information in post and comments. Keep it large enough that
+  it has room for all the good stuff in it.
+  Use markdown tables, code blocks and other formatting techniques if needed to clearly present the information.
+  **Write the summary like you are writing a good quality blog to publish it. Be rally good at explaining things in your blog.**
+  Given is the content of the post web-page and conversation around it on hackernews."
+tagPrompt: |
+  "You are given a story. From the following tags, select a set of tags that correctly represent the intent of story.
+  Be conservative on the tags that you select and output only those that that are truly aligned with the story given.
+  Output one tag per line and don't output anything else, before, after or on those lines."
+tags:
+  - "programming"
+  - "artificial-intelligence"
+  - "distributed-systems"
+  - "security"
+  - "internet"
+  - "operating-system"
+  - "mathematics"
+  - "gaming"
+  - "biotechnology"
+  - "medical-science"
+  - "politics"
+  - "finance"
+  - "environment"
+  - "space"
+  - "unknown"

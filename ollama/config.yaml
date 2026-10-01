@@ -1,0 +1,8 @@
+host: "http://192.168.0.7:11434"
+model: "qwen3:32b"
+contextSize: 24576
+timeout: 3600s
+stream: true
+maxIdleConns: 1
+idleConnTimeout: 900s
+maxIdleConnsPerHost: 1
